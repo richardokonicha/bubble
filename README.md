@@ -3,6 +3,8 @@
 A place to Discover
 
 ![Bubble app](https://github.com/konichar/bubble/blob/master/nft.png?raw=true)
+
+![Bubble app](https://github.com/konichar/bubble/blob/master/nft2.png?raw=true)
 ## Available Scripts
 
 In the project directory, you can run:
