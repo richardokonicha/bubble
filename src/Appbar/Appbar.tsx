@@ -3,16 +3,13 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import { Container, Avatar } from '@mui/material'
 import { useTheme } from '@mui/material/styles';
-import MenuIcon from '@mui/icons-material/Menu';
 import BubbleChartIcon from '@mui/icons-material/BubbleChart';
 import Brightness3Icon from '@mui/icons-material/Brightness3';
 import Brightness1Icon from '@mui/icons-material/Brightness1';
 import me from "./Bored_ape_NFT.webp"
-import { display } from '@mui/system';
 
 export default function Appbar({ toggleColorMode }) {
 

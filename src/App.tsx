@@ -1,9 +1,8 @@
-import { Container, CssBaseline, Button } from '@mui/material'
+import { CssBaseline } from '@mui/material'
 import Appbar from './Appbar/Appbar';
-import useMediaQuery from '@mui/material/useMediaQuery';
 import { useMemo, useState } from 'react'
 import { ThemeProvider, createTheme } from '@mui/material/styles'
-import { red, blue, amber, blueGrey, grey, yellow } from '@mui/material/colors';
+import { amber, blueGrey, grey, yellow } from '@mui/material/colors';
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Dashboard from './Discover';
 
