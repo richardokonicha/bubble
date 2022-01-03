@@ -3,7 +3,9 @@ import Appbar from './Appbar/Appbar';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useMemo, useState } from 'react'
 import { ThemeProvider, createTheme } from '@mui/material/styles'
-import { red, blue, amber, deepOrange, grey } from '@mui/material/colors';
+import { red, blue, amber, blueGrey, grey, yellow } from '@mui/material/colors';
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import Dashboard from './Discover';
 
 type PaletteMode = "light" | "dark"
 
@@ -12,21 +14,32 @@ const getDesignTokens = (mode: PaletteMode) => ({
     mode,
     ...(mode === 'light'
       ? {
-        // palette values for light mode
-        primary: amber,
-        divider: amber[200],
         text: {
           primary: grey[900],
           secondary: grey[800],
         },
+        primary: {
+          main: "#eceff1"
+        },
+        secondary: {
+          main: amber[700]
+        },
+        divider: blueGrey[100],
+        background: {
+          default: blueGrey[200],
+          paper: blueGrey[100],
+        },
       }
       : {
         // palette values for dark mode
-        primary: deepOrange,
-        divider: deepOrange[700],
+        primary: blueGrey,
+        divider: blueGrey[700],
+        secondary: {
+          main: yellow[500]
+        },
         background: {
-          default: deepOrange[900],
-          paper: deepOrange[900],
+          default: blueGrey[900],
+          paper: blueGrey[900],
         },
         text: {
           primary: '#fff',
@@ -50,20 +63,25 @@ function App() {
       <CssBaseline />
       <>
         <Appbar toggleColorMode={toggleColorMode}></Appbar>
-        <Container maxWidth="lg">
-          <Button
-            variant='contained'
-            // onClick={() => toggleColorMode()}
-            sx={{
+        <AppRoute />
 
-            }}>
-            ddd
-          </Button>
-        </Container>
       </>
     </ThemeProvider>
 
   )
 }
 
+
 export default App;
+
+
+const AppRoute = () => {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Dashboard />}>
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  )
+}

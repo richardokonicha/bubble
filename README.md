@@ -1,7 +1,8 @@
-# Getting Started with Create React App
+# Bubble NFT Marketplace
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A place to Discover
 
+![Bubble app](https://github.com/konichar/bubble/blob/master/nft.png?raw=true)
 ## Available Scripts
 
 In the project directory, you can run:
