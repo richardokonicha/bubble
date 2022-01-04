@@ -4,6 +4,7 @@ import WhatshotIcon from '@mui/icons-material/Whatshot';
 import { Button, Card, CardActions, CardContent, CardMedia, Container, Divider, IconButton, InputAdornment, OutlinedInput, Stack, Typography } from '@mui/material';
 import superrare from './Superrare.jpeg';
 import apes from './apes.png'
+import { width } from '@mui/system';
 
 const nfts = [
     {
@@ -25,33 +26,30 @@ const Discover = () => {
                 fontSize: 14,
                 color: 'primary.light'
             }} >Discover</Typography>
-            <Stack
-                sx={{ marginY: 1 }}
-                direction="row" >
 
-                <Typography variant='h5' sx={{
-                    fontSize: 18,
-                    fontWeight: 'bold',
-                    color: 'primary',
-                }}>
-                    Best NFT Marketplace
-                    <IconButton
-                        size="small"
-                        color="inherit"
-                        aria-label="menu"
-                    >
-                        <AddAlertOutlinedIcon sx={{ marginLeft: 1, color: "secondary.main", width: 16, height: 16 }} />
-                    </IconButton>
-                </Typography>
 
-            </Stack>
+            <Typography variant='h5' sx={{
+                marginY: 1,
+                fontSize: 18,
+                fontWeight: 'bold',
+                color: 'primary',
+            }}>
+                Best NFT Marketplace
+                <IconButton
+                    size="small"
+                    color="inherit"
+                    aria-label="menu"
+                >
+                    <AddAlertOutlinedIcon sx={{ marginLeft: 1, color: "secondary.main", width: 16, height: 16 }} />
+                </IconButton>
+            </Typography>
+
             <OutlinedInput
                 label="Search"
                 id="outlined-size-small"
-                fullWidth
                 color="secondary"
                 size="small"
-                sx={{ flexGrow: 1, marginY: 1 }}
+                sx={{ flexGrow: 1, marginY: 1, width: { xs: '100%', sm: "280px" } }}
                 endAdornment={
                     <InputAdornment position="end">
                         <IconButton
@@ -64,43 +62,48 @@ const Discover = () => {
                     </InputAdornment>}
             />
             <Divider sx={{ marginY: 1, color: "primary" }} />
-            <Typography variant='subtitle2' >
+            <Typography variant='subtitle2' marginY={2}>
                 New Deals <WhatshotIcon sx={{ width: 12, height: 12, color: 'secondary.main', flexGrow: 1 }} />
             </Typography>
-            {
-                nfts.map((nft) => (
-                    <Card sx={{
-                        marginY: 2
-                    }}>
-                        <CardMedia
-                            component="img"
-                            height="280"
-                            image={nft.image}
-                            alt="green iguana"
-                        >
+            <Stack spacing={2} direction={{ xs: "column", sm: "row" }} >
 
-                        </CardMedia>
-                        <CardContent>
-                            <Typography gutterBottom variant="h5" component="div">
-                                {nft.name}
-                            </Typography>
-                            <Typography variant="body2" color="text.secondary">
-                                {nft.describe}
-                            </Typography>
-                        </CardContent>
-                        <CardActions>
-                            <Button size="small" variant='contained' color='secondary'>Purchase</Button>
-                        </CardActions>
-                    </Card>
-                ))
-            }
+                {
+                    nfts.map((nft) => (
+                        <Card sx={{
+                            width: { xs: "100%", sm: "280px" },
+
+                        }}>
+                            <CardMedia
+                                component="img"
+                                height="280"
+                                image={nft.image}
+                                alt="green iguana"
+                            >
+
+                            </CardMedia>
+                            <CardContent>
+                                <Typography gutterBottom variant="h5" component="div">
+                                    {nft.name}
+                                </Typography>
+                                <Typography variant="body2" color="text.secondary">
+                                    {nft.describe}
+                                </Typography>
+                            </CardContent>
+                            <CardActions>
+                                <Button size="small" variant='contained' color='secondary'>Purchase</Button>
+                            </CardActions>
+                        </Card>
+                    ))
+                }
+            </Stack>
+
 
             <Divider
-                sx={{ marginY: 1, color: "primary" }}
+                sx={{ marginY: 2, color: "primary" }}
 
             />
 
-        </Container>
+        </Container >
     )
 }
 
