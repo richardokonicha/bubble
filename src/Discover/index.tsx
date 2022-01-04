@@ -4,6 +4,7 @@ import WhatshotIcon from '@mui/icons-material/Whatshot';
 import { Button, Card, CardActions, CardContent, CardMedia, Container, Divider, IconButton, InputAdornment, OutlinedInput, Stack, Typography } from '@mui/material';
 import superrare from './Superrare.jpeg';
 import apes from './apes.png'
+import { width } from '@mui/system';
 
 const nfts = [
     {
