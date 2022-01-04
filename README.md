@@ -1,10 +1,12 @@
 # Bubble NFT Marketplace
 
 A place to Discover
-https://bubble-cyan.vercel.app/
-![Bubble app](https://github.com/konichar/bubble/blob/master/nft.png?raw=true)
 
-![Bubble app](https://github.com/konichar/bubble/blob/master/nft2.png?raw=true)
+<div>
+<img alt="Bubble app" src="https://github.com/konichar/bubble/blob/master/webscreen.png?raw=true"></img>
+
+<img alt="Bubble app" src="https://github.com/konichar/bubble/blob/master/nft.png?raw=true"></img>
+<div>
 ## Available Scripts
 
 In the project directory, you can run:
