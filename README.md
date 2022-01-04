@@ -5,7 +5,7 @@ A place to Discover
 <div>
 <img alt="Bubble app" src="https://github.com/konichar/bubble/blob/master/webscreen.png?raw=true"></img>
 
-<img alt="Bubble app" src="https://github.com/konichar/bubble/blob/master/nft.png?raw=true"></img>
+<img alt="Bubble app" width="400px" src="https://github.com/konichar/bubble/blob/master/nft.png?raw=true"></img>
 <div>
 ## Available Scripts
 

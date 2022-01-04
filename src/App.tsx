@@ -5,6 +5,7 @@ import { ThemeProvider, createTheme } from '@mui/material/styles'
 import { amber, blueGrey, grey, yellow } from '@mui/material/colors';
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Dashboard from './Discover';
+import DiscoverItem from './DiscoverItem';
 
 type PaletteMode = "light" | "dark"
 
@@ -25,7 +26,7 @@ const getDesignTokens = (mode: PaletteMode) => ({
         },
         divider: blueGrey[100],
         background: {
-          default: blueGrey[200],
+          default: blueGrey[50],
           paper: blueGrey[100],
         },
       }
@@ -63,7 +64,6 @@ function App() {
       <>
         <Appbar toggleColorMode={toggleColorMode}></Appbar>
         <AppRoute />
-
       </>
     </ThemeProvider>
 
@@ -80,6 +80,7 @@ const AppRoute = () => {
       <Routes>
         <Route path="/" element={<Dashboard />}>
         </Route>
+        <Route path="/:item" element={<DiscoverItem />} />
       </Routes>
     </BrowserRouter>
   )

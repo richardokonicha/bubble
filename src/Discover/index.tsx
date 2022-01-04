@@ -4,6 +4,7 @@ import WhatshotIcon from '@mui/icons-material/Whatshot';
 import { Button, Card, CardActions, CardContent, CardMedia, Container, Divider, IconButton, InputAdornment, OutlinedInput, Stack, Typography } from '@mui/material';
 import superrare from './Superrare.jpeg';
 import apes from './apes.png'
+import { Link } from 'react-router-dom'
 
 const nfts = [
     {
@@ -23,7 +24,7 @@ const Discover = () => {
         <Container maxWidth="lg">
             <Typography variant='h6' sx={{
                 fontSize: 14,
-                color: 'primary.light'
+                color: 'primary'
             }} >Discover</Typography>
 
 
@@ -67,8 +68,8 @@ const Discover = () => {
             <Stack spacing={2} direction={{ xs: "column", sm: "row" }} >
 
                 {
-                    nfts.map((nft) => (
-                        <Card sx={{
+                    nfts.map((nft, index) => (
+                        <Card key={index} sx={{
                             width: { xs: "100%", sm: "280px" },
 
                         }}>
@@ -89,18 +90,14 @@ const Discover = () => {
                                 </Typography>
                             </CardContent>
                             <CardActions>
-                                <Button size="small" variant='contained' color='secondary'>Purchase</Button>
+                                <Button component={Link} to={`${index}`} size="small" variant='contained' color='secondary'>Purchase</Button>
                             </CardActions>
                         </Card>
                     ))
                 }
             </Stack>
 
-
-            <Divider
-                sx={{ marginY: 2, color: "primary" }}
-
-            />
+            <Divider sx={{ marginY: 2, color: "primary" }} />
 
         </Container >
     )

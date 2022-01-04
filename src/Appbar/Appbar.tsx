@@ -10,17 +10,20 @@ import BubbleChartIcon from '@mui/icons-material/BubbleChart';
 import Brightness3Icon from '@mui/icons-material/Brightness3';
 import Brightness1Icon from '@mui/icons-material/Brightness1';
 import me from "./Bored_ape_NFT.webp"
+import { Link } from 'react-router-dom'
 
 export default function Appbar({ toggleColorMode }) {
 
     const theme = useTheme();
     return (
-        <Box sx={{ flexGrow: 1, marginBottom: "32px" }}>
+        <Box sx={{ flexGrow: 1 }}>
             <AppBar position="static"  >
 
                 <Container maxWidth="lg">
                     <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
                         <IconButton
+
+                            // component={() => <Link to="/" />}
                             size="large"
                             edge="start"
                             // color="primary"
@@ -28,9 +31,8 @@ export default function Appbar({ toggleColorMode }) {
                         >
                             <BubbleChartIcon
                                 sx={{ mr: 1, color: "secondary.main" }}
-
                             />
-                            <Typography variant="h6" component="div" sx={{ fontSize: 16, color: "secondary.main" }}>
+                            <Typography variant="h6" sx={{ fontSize: 16, color: "secondary.main" }}>
                                 Bubble
                             </Typography>
 
