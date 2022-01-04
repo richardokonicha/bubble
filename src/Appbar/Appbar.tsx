@@ -4,7 +4,7 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
-import { Container, Avatar } from '@mui/material'
+import { Container, Avatar, Button } from '@mui/material'
 import { useTheme } from '@mui/material/styles';
 import BubbleChartIcon from '@mui/icons-material/BubbleChart';
 import Brightness3Icon from '@mui/icons-material/Brightness3';
@@ -21,22 +21,18 @@ export default function Appbar({ toggleColorMode }) {
 
                 <Container maxWidth="lg">
                     <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
-                        <IconButton
 
-                            // component={() => <Link to="/" />}
-                            size="large"
-                            edge="start"
-                            // color="primary"
-                            aria-label="menu"
-                        >
-                            <BubbleChartIcon
+                        <Button
+                            startIcon={<BubbleChartIcon
                                 sx={{ mr: 1, color: "secondary.main" }}
-                            />
-                            <Typography variant="h6" sx={{ fontSize: 16, color: "secondary.main" }}>
-                                Bubble
-                            </Typography>
+                            />}
+                            component={Link}
+                            to="/"
+                            sx={{ fontSize: 14, color: "secondary.main" }}
+                        >
+                            Bubble
 
-                        </IconButton>
+                        </Button>
 
 
                         <IconButton

@@ -2,29 +2,17 @@ import AddAlertOutlinedIcon from '@mui/icons-material/AddAlertOutlined';
 import SearchIcon from '@mui/icons-material/Search';
 import WhatshotIcon from '@mui/icons-material/Whatshot';
 import { Button, Card, CardActions, CardContent, CardMedia, Container, Divider, IconButton, InputAdornment, OutlinedInput, Stack, Typography } from '@mui/material';
-import superrare from './Superrare.jpeg';
-import apes from './apes.png'
 import { Link } from 'react-router-dom'
-
-const nfts = [
-    {
-        name: "Superrare",
-        image: superrare,
-        describe: "Desert warrior rarest nft"
-    },
-    {
-        name: "Apes",
-        image: apes,
-        describe: "Angry ape unleash terror nft"
-    }
-]
+import { useFetchAll } from "../Utils/useFetch"
 
 const Discover = () => {
+    const data = useFetchAll()
     return (
         <Container maxWidth="lg">
             <Typography variant='h6' sx={{
                 fontSize: 14,
-                color: 'primary'
+                color: 'primary',
+                marginTop: 2,
             }} >Discover</Typography>
 
 
@@ -68,7 +56,7 @@ const Discover = () => {
             <Stack spacing={2} direction={{ xs: "column", sm: "row" }} >
 
                 {
-                    nfts.map((nft, index) => (
+                    data.map((nft, index) => (
                         <Card key={index} sx={{
                             width: { xs: "100%", sm: "280px" },
 

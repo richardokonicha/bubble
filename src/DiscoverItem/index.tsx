@@ -1,30 +1,30 @@
 import { Avatar, Box, Typography } from '@mui/material';
-import apes from '../Discover/apes.png'
-
+import { useParams } from 'react-router-dom';
+import { useFetch } from "../Utils/useFetch"
 
 const DiscoverItem = () => {
+    const { item } = useParams()
+    const data = useFetch(Number(item))
+
     return (
         <Box>
             <Box
                 sx={{
-                    // width: 300,
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "flex-end",
                     height: 300,
-                    // backgroundColor: 'primary.dark',
                     marginBottom: 6,
-                    backgroundImage: `url(${apes})`,
+                    backgroundImage: `url(${data.image})`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
-                    // width: `calc(100vw + 48px)`,
                     '&:hover': {
                         backgroundColor: 'primary.main',
                         opacity: [0.9, 0.8, 0.7],
                     },
                 }}
             >
-                <Avatar alt="apes" src={apes} sx={{ marginBottom: -4, width: "130px", height: "130px", border: "2px solid white" }} />
+                <Avatar alt="apes" src={data.image} sx={{ marginBottom: -4, width: "130px", height: "130px", border: "2px solid white" }} />
             </Box>
             <Typography
                 variant='h6'
@@ -35,7 +35,7 @@ const DiscoverItem = () => {
                     color: "text",
                     fontSize: 24,
                 }}>
-                name
+                {data.name}
             </Typography>
         </Box>
     )

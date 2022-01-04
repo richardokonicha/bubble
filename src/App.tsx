@@ -58,12 +58,20 @@ function App() {
     )
   }
   const theme = useMemo(() => createTheme(getDesignTokens(mode)), [mode]);
+
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <>
-        <Appbar toggleColorMode={toggleColorMode}></Appbar>
-        <AppRoute />
+        <BrowserRouter>
+          <Appbar toggleColorMode={toggleColorMode}></Appbar>
+          <Routes>
+            <Route path="/" element={<Dashboard />}>
+            </Route>
+            <Route path="/:item" element={<DiscoverItem />} />
+          </Routes>
+        </BrowserRouter>
+        {/* <AppRoute /> */}
       </>
     </ThemeProvider>
 
