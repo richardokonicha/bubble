@@ -9,7 +9,7 @@ import { useTheme } from '@mui/material/styles';
 import BubbleChartIcon from '@mui/icons-material/BubbleChart';
 import Brightness3Icon from '@mui/icons-material/Brightness3';
 import Brightness1Icon from '@mui/icons-material/Brightness1';
-import me from "./Bored_ape_NFT.webp"
+import me from "./forest1.jpg"
 import { Link } from 'react-router-dom'
 
 export default function Appbar({ toggleColorMode }) {
@@ -30,7 +30,7 @@ export default function Appbar({ toggleColorMode }) {
                             to="/"
                             sx={{ fontSize: 14, color: "secondary.main" }}
                         >
-                            Bubble
+                            Forest
 
                         </Button>
 

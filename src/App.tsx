@@ -2,7 +2,7 @@ import { CssBaseline } from '@mui/material'
 import Appbar from './Appbar/Appbar';
 import { useMemo, useState } from 'react'
 import { ThemeProvider, createTheme } from '@mui/material/styles'
-import { amber, blueGrey, grey, yellow } from '@mui/material/colors';
+import { amber, blueGrey, grey, yellow, green } from '@mui/material/colors';
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Dashboard from './Discover';
 import DiscoverItem from './DiscoverItem';
@@ -22,7 +22,7 @@ const getDesignTokens = (mode: PaletteMode) => ({
           main: "#eceff1"
         },
         secondary: {
-          main: amber[700]
+          main: green[900]
         },
         divider: blueGrey[100],
         background: {
@@ -35,7 +35,7 @@ const getDesignTokens = (mode: PaletteMode) => ({
         primary: blueGrey,
         divider: blueGrey[700],
         secondary: {
-          main: yellow[500]
+          main: green[500]
         },
         background: {
           default: blueGrey[900],
@@ -81,15 +81,3 @@ function App() {
 
 export default App;
 
-
-const AppRoute = () => {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Dashboard />}>
-        </Route>
-        <Route path="/:item" element={<DiscoverItem />} />
-      </Routes>
-    </BrowserRouter>
-  )
-}
