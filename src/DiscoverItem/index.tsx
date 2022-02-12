@@ -1,4 +1,4 @@
-import { Avatar, Box, Container, Typography, Chip } from '@mui/material';
+import { Avatar, Box, Container, Typography } from '@mui/material';
 import { useParams } from 'react-router-dom';
 import { useFetch } from "../Utils/useFetch"
 
