@@ -2,7 +2,7 @@ import { CssBaseline } from '@mui/material'
 import Appbar from './Appbar/Appbar';
 import { useMemo, useState } from 'react'
 import { ThemeProvider, createTheme } from '@mui/material/styles'
-import { amber, blueGrey, grey, yellow, green } from '@mui/material/colors';
+import { blueGrey, grey, green } from '@mui/material/colors';
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Dashboard from './Discover';
 import DiscoverItem from './DiscoverItem';
