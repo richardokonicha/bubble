@@ -8,5 +8,4 @@ RUN yarn add nodemon
 COPY ./build .
 EXPOSE 3000
 
- 
 CMD [ "yarn", "run" ]

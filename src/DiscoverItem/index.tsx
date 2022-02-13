@@ -4,7 +4,7 @@ import { useFetch } from "../Utils/useFetch"
 
 const DiscoverItem = () => {
     const { item } = useParams()
-    const data = useFetch(Number(item))
+    const data = useFetch(item)
 
     return (
         <Box>
@@ -15,7 +15,7 @@ const DiscoverItem = () => {
                     alignItems: "flex-end",
                     height: 300,
                     marginBottom: 6,
-                    backgroundImage: `url(${data.thumbnail_image})`,
+                    backgroundImage: `url(${data?.thumbnail_image})`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     '&:hover': {
@@ -24,7 +24,7 @@ const DiscoverItem = () => {
                     },
                 }}
             >
-                <Avatar alt="apes" src={data.thumbnail_image} sx={{ marginBottom: -4, width: "130px", height: "130px", border: "2px solid white" }} />
+                <Avatar alt="apes" src={data?.thumbnail_image} sx={{ marginBottom: -4, width: "130px", height: "130px", border: "2px solid white" }} />
             </Box>
             <Typography
                 variant='h6'
@@ -35,7 +35,7 @@ const DiscoverItem = () => {
                     color: "text",
                     fontSize: 24,
                 }}>
-                {data.forest_name}
+                {data?.forest_name}
             </Typography>
             <Container >
                 <Typography
@@ -49,7 +49,7 @@ const DiscoverItem = () => {
                         fontWeight: "light",
                         textAlign: "center"
                     }}>
-                    {data.long_description}
+                    {data?.long_description}
                 </Typography>
             </Container>
 

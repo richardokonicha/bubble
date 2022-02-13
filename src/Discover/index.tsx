@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom'
 import { useFetchAll } from "../Utils/useFetch"
 
 interface DataProps {
+    slug: string
     forest_name: string,
     thumbnail_image: any,
     forest_type: string,
@@ -103,8 +104,6 @@ const Discover = () => {
                     ))}
                 </TextField>
             </Box>
-
-
             <Divider sx={{ marginY: 1, color: "primary" }} />
             <Typography variant='subtitle2' marginY={2}>
                 Newly discovered forest <WhatshotIcon sx={{ width: 12, height: 12, color: 'secondary.main', flexGrow: 1 }} />
@@ -127,7 +126,7 @@ const Discover = () => {
                             >
 
                             </CardMedia>
-                            <Link to={`${index}`} style={{ textDecoration: "none" }}>
+                            <Link to={`${data.slug}`} style={{ textDecoration: "none" }}>
                                 <CardActions sx={{
                                     textDecoration: "none",
                                 }}>
