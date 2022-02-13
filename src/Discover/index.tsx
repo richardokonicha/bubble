@@ -5,6 +5,9 @@ import WhatshotIcon from '@mui/icons-material/Whatshot';
 import { TextField, MenuItem, Avatar, Box, Chip, Card, CardActions, CardContent, CardMedia, Container, Divider, IconButton, InputAdornment, OutlinedInput, Stack, Typography } from '@mui/material';
 import { Link } from 'react-router-dom'
 import { useFetchAll } from "../Utils/useFetch"
+import forestIcon from './forest1.webp'
+import reforestationIcon from './temp.jpg'
+
 
 interface DataProps {
     slug: string
@@ -145,7 +148,7 @@ const Discover = () => {
                                                 {data.forest_name}
                                             </Typography>
                                             <Chip
-                                                avatar={<Avatar alt={data.forest_type} src={`{data.forest_type}.jpg`} />}
+                                                avatar={<Avatar alt={data.forest_type} src={data.forest_type.toLowerCase() === "conservation" ? forestIcon : reforestationIcon} />}
                                                 label={data.forest_type}
                                                 variant="outlined"
                                             />
@@ -154,7 +157,6 @@ const Discover = () => {
                                             {data.brief_description}
                                         </Typography>
                                     </CardContent>
-                                    {/* <Button component={Link} to={`${index}`} size="small" variant='contained' color='secondary'>Read</Button> */}
                                 </CardActions>
                             </Link>
                         </Card>

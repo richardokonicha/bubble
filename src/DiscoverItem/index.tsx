@@ -1,4 +1,4 @@
-import { Avatar, Box, Container, Typography } from '@mui/material';
+import { Avatar, Box, Container, Typography, Chip, Stack } from '@mui/material';
 import { useParams } from 'react-router-dom';
 import { useFetch } from "../Utils/useFetch"
 
@@ -40,7 +40,6 @@ const DiscoverItem = () => {
             <Container >
                 <Typography
                     variant='h6'
-
                     sx={{
                         paddingTop: 2,
                         textTransform: "capitalize",
@@ -51,6 +50,33 @@ const DiscoverItem = () => {
                     }}>
                     {data?.long_description}
                 </Typography>
+                <Stack direction={"row"} spacing={4} justifyContent="center" marginTop={4}>
+                    <Chip
+                        avatar={<Avatar alt={data?.forest_type} src={`{data.forest_type}.jpg`} />}
+                        label={data?.forest_type}
+                        variant="outlined"
+                    />
+                    <Chip
+                        avatar={<Avatar alt={data?.location} src={`{data.forest_type}.jpg`} />}
+                        label={data?.location}
+                        variant="outlined"
+                    />
+                    <Chip
+                        label={data?.country}
+                        variant="outlined"
+                    />
+                    <Chip
+                        label={data?.area_covered}
+                        variant="outlined"
+                    />
+                    <Chip
+                        label={data?.health_metrics}
+                        variant="outlined"
+                    />
+                </Stack>
+
+
+
             </Container>
 
         </Box >
