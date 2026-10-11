@@ -14,10 +14,12 @@
     "@types/node": "^16.7.13",
     "@types/react": "^17.0.20",
     "@types/react-dom": "^17.0.9",
-    "axios": "^0.25.0",
+    "axios": "^0.34.0",
+    "dotenv": "^8.2.0",
     "express": "4.17.1",
     "framer-motion": "^5",
     "html-webpack-plugin": "^5.5.0",
+    "node-fetch": "^3.3.2",
     "nodemon": "2.0.3",
     "nth-check": "^2.0.1",
     "pushstate-server": "^3.1.0",
@@ -33,9 +35,9 @@
     "webpack-dev-server": "^4.7.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "dev": "nodemon express.js",
-    "build": "react-scripts build",
+    "start": "node init && react-scripts start",
+    "dev": "node init && nodemon express.js",
+    "build": "node init && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
