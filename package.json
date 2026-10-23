@@ -33,9 +33,9 @@
     "webpack-dev-server": "^4.7.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "dev": "nodemon express.js",
-    "build": "react-scripts build",
+    "start": "node api.js && react-scripts start",
+    "dev": "node api.js && nodemon express.js",
+    "build": "node api.js && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
